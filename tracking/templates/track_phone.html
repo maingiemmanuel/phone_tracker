@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+li
+<head>
+    <title>Track Phone</title>
+
+ <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!--slick slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap-grid.rtl.css' %}" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/bootstrap-utilities.css' %}" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/bootstrap-reboot.css' %}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Track Your Phone</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Track Phone</button>
+    </form>
+
+<!-- jQery -->
+  <script  src="{% static 'js/bootstrap.bundle.js' %}"></script>
+  <!-- bootstrap js -->
+  <script  src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- slick slider -->
+  <script  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
+  <!-- custom js -->
+  <script  src="{% static 'js/bootstrap.esm.js' %}"></script>
+</body>
+</html>
